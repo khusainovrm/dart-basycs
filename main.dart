@@ -5,7 +5,7 @@ void printInteger(int aNumber) {
 const outsideNumber = 42;
 var a = 2045;
 const b = 2017;
-const planets = ['Eath', 'Pluton', "Neptun"];
+const planets = ['Earth', 'Platon', "Neptune"];
 var start = 1;
 var counter = 0;
 
