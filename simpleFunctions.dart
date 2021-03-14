@@ -16,9 +16,10 @@ void doStuff({List<int> list = const [1,4,7], Map<String, String> gifts = const 
   print('$list, $gifts');
 }
 
-void main(){
+void main(List<String> arguments){
   // print(makeProffesion('Rinat','Developer'));
 //   print(makeProffesion('Gena','singer',42));
 //   print(showDefaultValue(name:"Rinat"));
-  doStuff(list:[4, 11, 4], gifts:{'third':'car'});
+//   doStuff(list:[4, 11, 4], gifts:{'third':'car'});
+print(arguments);
 }
