@@ -11,9 +11,8 @@ var nobleGases = {
 };
 
 var person = Map();
-person['name'] = 'Rinat';
 
-void main(){
+void main() {
   print(nobleGases);
   print(person);
 }

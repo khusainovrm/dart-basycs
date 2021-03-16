@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class Paladin {
   num? level;
   num? health;
@@ -13,10 +15,15 @@ class Paladin {
 
 class Warrior extends Paladin {
   num? madness;
-  Warrior({this.madness}) : super.holy();
+  Warrior() : super.holy(level: _randomLevel());
+  Warrior.mad({this.madness}) : super.holy();
+
+  static int _randomLevel() => Random().nextInt(100);
 
   @override
-  String toString() => 'Warrior has $level level and $madness madness';
+  String toString() => (madness != null)
+      ? '${super.toString()} => Warrior has $level level and ${madness} madness'
+      : '${super.toString()} => Warrior has $level level';
 }
 
 void main() {
@@ -24,6 +31,7 @@ void main() {
   // Paladin hpal = Paladin.holy(level: 20);
   // print(pal);
   // print(hpal);
-  Warrior war = Warrior(madness: 7);
-  print(war);
+  // Warrior war = Warrior.mad(madness: 7);
+  Warrior randomFunWar = Warrior();
+  print(randomFunWar);
 }
