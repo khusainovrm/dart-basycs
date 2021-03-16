@@ -1,10 +1,12 @@
 import 'package:rinat_project/api.dart' as api;
-// import 'package:rinat_project/rinat_project.dart' as rinat_project;
-// import 'package:rinat_project/calculation.dart' as calc;
+
+Future<String> task() async {
+  return await Future.delayed(Duration(seconds: 2), () => 'Task is completed');
+}
 
 void main(List<String> arguments) async {
-  // print('Hello world: ${rinat_project.calculate()}!');
-  // print(calc.sumUp(40, 2));
-  var result = await api.api();
+  const url = 'http://77.246.159.150:8000/api/v1/shared/reactions';
+  var result = await api.get(url);
   print(result);
+  print(await task());
 }
